@@ -1,0 +1,12 @@
+{
+  "name": "update-beta-features",
+  "version": "1.0.0",
+  "description": "update-beta-features - new lambda description",
+  "repository": {},
+  "license": "UNLICENSED",
+  "dependencies": {
+    "alonzo": "latest",
+    "aws-sdk": "^2.834.0",
+    "axios": "latest"
+  }
+}

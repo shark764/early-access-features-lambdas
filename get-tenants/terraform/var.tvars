@@ -1,0 +1,9 @@
+runtime = "nodejs12.x"
+timeout = 120
+memory_size = 256
+zip_path = "get-tenants/get-tenants.zip"
+handler = "index.handler"
+environmentVars = {
+  "ENVIRONMENT" = "${ENVIRONMENT}",
+  "DOMAIN" = "${DOMAIN}"
+}

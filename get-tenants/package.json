@@ -1,0 +1,12 @@
+{
+  "name": "get-tenants",
+  "version": "1.0.0",
+  "description": "get-tenants - new lambda description",
+  "repository": {},
+  "license": "UNLICENSED",
+  "dependencies": {
+    "alonzo": "latest",
+    "axios": "latest",
+    "aws-sdk": "^2.822.0"
+  }
+}

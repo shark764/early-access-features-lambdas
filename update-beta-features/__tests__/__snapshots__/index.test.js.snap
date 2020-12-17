@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`update-beta-features throws an error when there is a problem retrieving cx credentials 1`] = `"An Error has occurred trying to retrieve cx credentials"`;

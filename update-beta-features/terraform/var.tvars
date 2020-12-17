@@ -1,0 +1,11 @@
+include_queue = "true"
+runtime = "nodejs12.x"
+timeout = 120
+queue_visibility_timeout_seconds = 120
+memory_size = 128
+zip_path = "update-beta-features/update-beta-features.zip"
+handler = "index.handler"
+environmentVars = {
+  "ENVIRONMENT" = "${ENVIRONMENT}",
+  "DOMAIN" = "${DOMAIN}"
+}

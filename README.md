@@ -1,4 +1,4 @@
-# lambda-starter-kit
+# early-access-features-lambdas created form lambda-starter-kit
 
 _Starter kit repository with all initial files and configuration to start adding new lambdas to it._
 

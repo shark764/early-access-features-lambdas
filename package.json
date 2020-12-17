@@ -1,7 +1,7 @@
 {
-  "name": "lambda-starter-kit",
-  "version": "1.0.0",
-  "description": "This is the starter kit for a new lambdas repository.",
+  "name": "early-access-features-lambdas",
+  "version": "1.0.1",
+  "description": "Lambdas for early access features",
   "main": "index.js",
   "scripts": {
     "alonzo": "alonzo",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SerenovaLLC/lambda-starter-kit.git"
+    "url": "git+https://github.com/SerenovaLLC/early-access-features-lambdas.git"
   },
   "keywords": [
     "lambda",
@@ -29,12 +29,15 @@
   "author": "SerenovaLLC",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/SerenovaLLC/lambda-starter-kit/issues"
+    "url": "https://github.com/SerenovaLLC/early-access-features-lambdas/issues"
   },
-  "homepage": "https://github.com/SerenovaLLC/lambda-starter-kit#readme",
-  "dependencies": {},
+  "homepage": "https://github.com/SerenovaLLC/early-access-features-lambdas#readme",
+  "dependencies": {
+    "alonzo": "^8.0.3-SNAPSHOT",
+    "aws-sdk": "^2.834.0",
+    "ci": "^2.0.0"
+  },
   "devDependencies": {
-    "alonzo": "^8.0.1",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
