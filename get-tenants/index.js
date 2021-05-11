@@ -15,6 +15,8 @@ exports.handler = async (event) => {
   const { feature, featureActiveFlag } = event;
   const logContext = { feature, featureActiveFlag };
 
+  log.info('get-tenants called', logContext);
+
   let cxAuthSecret;
   try {
     cxAuthSecret = await secretsClient.getSecretValue({
@@ -48,7 +50,7 @@ exports.handler = async (event) => {
   }
 
   const tenantData = getTenantsResults.data.result;
-  log.info('get-tenants called', { ...logContext, tenantData });
+  log.info('Got tenants to update', { ...logContext, numberOfTenants: tenantData.length });
 
   try {
     await Promise.all(tenantData.map(async (tenant) => {
@@ -63,7 +65,7 @@ exports.handler = async (event) => {
         featureActiveFlag,
       });
 
-      log.info('calling update-beta-features for tenant', {
+      log.debug('calling update-beta-features for tenant', {
         ...logContext,
         tenantName,
         tenantId,
@@ -85,6 +87,7 @@ exports.handler = async (event) => {
     );
     throw error;
   }
-  log.info('get-tenants is complete');
+
+  log.info('get-tenants is complete', logContext);
   return 'Finished';
 };
