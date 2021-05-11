@@ -1,3 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`get-tenants throws an error when there is a problem retrieving cx credentials 1`] = `"An Error has occurred trying to retrieve cx credentials"`;
+exports[`get-tenants calls get secret value as expected 1`] = `
+Array [
+  Array [
+    Object {
+      "SecretId": "us-east-1-dev-smooch-cx",
+    },
+  ],
+]
+`;
+
+exports[`get-tenants calls get tenants as expected 1`] = `
+Array [
+  Array [
+    Object {
+      "auth": Object {
+        "id": "mock-secret-id",
+        "secret": "mock-secret",
+      },
+      "method": "get",
+      "url": "https://dev-api.domain/v1/tenants?regionId=00000000-0000-0000-0000-0000000000",
+    },
+  ],
+]
+`;
+
+exports[`get-tenants puts events to update-beta-features queue as expected 1`] = `
+Array [
+  Array [
+    Object {
+      "MessageBody": "{\\"tenantId\\":\\"00000000-0000-0000-0000-000000000001\\",\\"feature\\":\\"mock-feature\\",\\"featureActiveFlag\\":true}",
+      "QueueUrl": "mock-beta-features-queue-url",
+    },
+  ],
+  Array [
+    Object {
+      "MessageBody": "{\\"tenantId\\":\\"00000000-0000-0000-0000-000000000002\\",\\"feature\\":\\"mock-feature\\",\\"featureActiveFlag\\":true}",
+      "QueueUrl": "mock-beta-features-queue-url",
+    },
+  ],
+]
+`;

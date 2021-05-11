@@ -81,7 +81,7 @@ const { handler } = index;
 
 describe('update-beta-features', () => {
   it('returns when the code runs without any error', async () => {
-    const result = await handler(event);
+    const result = await handler(event());
     expect(result).toEqual('Finished');
   });
 
