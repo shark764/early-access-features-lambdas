@@ -37,7 +37,7 @@ exports.handler = async (event) => {
   try {
     getTenantsResults = await axios({
       method: 'get',
-      url: `https://${ENVIRONMENT}-api.${DOMAIN}/v1/tenants?regionId=00000000-0000-0000-0000-0000000000`,
+      url: `https://${AWS_REGION}-${ENVIRONMENT}-edge.${DOMAIN}/v1/tenants?regionId=00000000-0000-0000-0000-0000000000`,
       auth,
     });
   } catch (error) {

@@ -36,7 +36,7 @@ exports.handler = async (event) => {
   try {
     betaFeaturesResult = await axios({
       method: 'get',
-      url: `https://${ENVIRONMENT}-api.${DOMAIN}/v1/tenants/${tenantId}/settings/betaFeatures/value`,
+      url: `https://${AWS_REGION}-${ENVIRONMENT}-edge.${DOMAIN}/v1/tenants/${tenantId}/settings/betaFeatures/value`,
       auth,
     });
   } catch (error) {
@@ -71,7 +71,7 @@ exports.handler = async (event) => {
     try {
       await axios({
         method: 'put',
-        url: `https://${ENVIRONMENT}-api.${DOMAIN}/v1/tenants/${tenantId}/settings/betaFeatures/value`,
+        url: `https://${AWS_REGION}-${ENVIRONMENT}-edge.${DOMAIN}/v1/tenants/${tenantId}/settings/betaFeatures/value`,
         auth,
         data: newBetaFeatures,
       });
