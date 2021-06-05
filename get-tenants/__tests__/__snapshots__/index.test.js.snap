@@ -19,7 +19,7 @@ Array [
         "secret": "mock-secret",
       },
       "method": "get",
-      "url": "https://dev-api.domain/v1/tenants?regionId=00000000-0000-0000-0000-0000000000",
+      "url": "https://us-east-1-dev-edge.domain/v1/tenants?regionId=00000000-0000-0000-0000-0000000000",
     },
   ],
 ]
