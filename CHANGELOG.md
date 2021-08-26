@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file. This change log follows the conventions of [keepachangelog.com](http://keepachangelog.com/).
 
+## [1.1.0]
+### Added
+- CXV1-27290 - Add lambda to set new feature flag (toolsMenu and networkTestUrl)
+
 ## [1.0.3]
 ### Fixed
 - region on CX URLs to work in prod
