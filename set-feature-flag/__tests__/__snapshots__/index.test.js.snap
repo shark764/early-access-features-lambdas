@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`set-feature-flag returns when the code runs without any error 1`] = `
+Array [
+  Array [
+    Object {
+      "auth": Object {
+        "id": "mock-secret-id",
+        "secret": "mock-secret",
+      },
+      "data": Object {
+        "description": "mock description",
+        "name": "mockFeatureFlag",
+        "value": true,
+      },
+      "method": "post",
+      "url": "https://us-east-1-qe-api.domain/v1/tenants/679236b5-c4d0-49b6-bcf9-871c35a3e4af/settings",
+    },
+  ],
+]
+`;
+
+exports[`set-feature-flag throws an error when there is a problem retrieving cx credentials 1`] = `"An Error has occurred trying to retrieve cx credentials"`;

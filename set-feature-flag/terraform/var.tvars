@@ -1,0 +1,4 @@
+runtime = "nodejs12.x"
+timeout = 150
+memory_size = 128
+zip_path = "set-feature-flag/set-feature-flag.zip"
